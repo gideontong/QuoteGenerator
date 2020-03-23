@@ -3,16 +3,30 @@
 
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
   <title>Random Quote Generator</title>
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+  <link rel="manifest" href="icons/site.webmanifest">
+  <link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="icons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#9f00a7">
+  <meta name="msapplication-config" content="icons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
 </head>
 
-<body>
+<body style="background-color: black">
   <nav>
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo"> Gideon's Quote Generator</a>
+      <a href="#" class="brand-logo center">Gideon's Website</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="http://gideon.splimtech.com">Website</a></li>
+        <li><a href="https://www.gideontong.com" target="_blank">Visit Homepage</a></li>
       </ul>
     </div>
   </nav>
@@ -22,22 +36,56 @@
       <div class="card blue-grey darken-1">
         <div class="card-content white-text">
           <span class="card-title">Quote</span>
-          <span id="quote">f
-        </span>
+          <span id="quote">Welcome to the new quote website!
+          </span>
         </div>
         <div class="card-action">
           <button onclick="go()" id="new" class="btn btn-primary new">New Quote</button>
-          <a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=cool quote">Tweet me</a>
+          <a class="btn" href="https://www.twitter.com/gideontong" target="_blank">See My Twitter</a>
         </div>
       </div>
     </div>
   </div>
   <script>
     function go() {
-      var quotes = ["a by gid", "b by gid", "c by gid"]
-      var i = Math.floor(Math.random() * 3);
+      var quotes = [
+        "The greatest glory in living lies not in never falling, but in rising every time we fall. <i>Nelson Mandela</i>",
+        "When you reach the end of your rope, tie a knot in it and hang on. <i>Franklin Roosevelt</i>",
+        "Spread love everywhere you go. Let no one ever come to you without leaving happier. <i>Mother Teresa</i>",
+        "Involve me and I learn. <i>Benjamin Franklin</i>",
+        "Whoever is happy will make others happy too. <i>Anne Frank</i>",
+        "Life is either a daring adventure or nothing at all. <i>Helen Keller</i>",
+        "You have brains in your head. You have feet in your shoes. You can steer yourself any direction you choose. <i>Dr. Seuss</i>",
+        "The future belongs to those who prepare for it today. <i>Malcom X</i>"
+      ];
+      var i = Math.floor(Math.random() * quotes.length);
       document.getElementById('quote').innerHTML = quotes[i];
     }
   </script>
+  <footer class="page-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Footer Content</h5>
+          <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Links</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        © 2014 Copyright Text
+        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </head>
